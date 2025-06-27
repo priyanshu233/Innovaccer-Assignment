@@ -27,6 +27,8 @@ function App() {
     }
   }, [todos]);
 
+
+  // Adding  tasks
   const addTodo = (text) => {
     const newTodo = {
       id: Date.now(),
@@ -45,10 +47,12 @@ function App() {
     );
   };
 
+  // delete task
   const deleteTodo = (id) => {
     setTodos(prevTodos => prevTodos.filter(todo => todo.id !== id));
   };
 
+  // editing tasks
   const editTodo = (id, newText) => {
     setTodos(prevTodos =>
       prevTodos.map(todo =>
@@ -56,7 +60,7 @@ function App() {
       )
     );
   };
-
+ // drag and drop tasks
   const reorderTodos = (startIndex, endIndex) => {
     setTodos(prevTodos => {
       const result = Array.from(prevTodos);
@@ -66,6 +70,8 @@ function App() {
     });
   };
 
+
+  // Filtering task
   const filteredTodos = todos.filter(todo => {
     switch (filter) {
       case 'active':
@@ -84,7 +90,7 @@ function App() {
           <Col md={8} lg={6}>
             <div className="text-center mb-4">
               <h1 className="app-title">✓ TODO Listyle</h1>
-              <p className="app-subtitle">Make and Mark your tasks</p>
+              <p className="app-subtitle">Make and Mark your tasks with style</p>
             </div>
             
             <Card className="main-card shadow-lg">
