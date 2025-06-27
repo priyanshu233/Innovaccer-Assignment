@@ -84,7 +84,7 @@ function App() {
           <Col md={8} lg={6}>
             <div className="text-center mb-4">
               <h1 className="app-title">✓ TODO Listyle</h1>
-              <p className="app-subtitle">Make and Mark your tasks with style</p>
+              <p className="app-subtitle">Make and Mark your tasks</p>
             </div>
             
             <Card className="main-card shadow-lg">
