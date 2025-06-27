@@ -1,0 +1,36 @@
+/* Todo Form Styles */
+.todo-input-group {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.todo-input {
+  border: none;
+  padding: 1rem;
+  font-size: 1.1rem;
+  background: white;
+}
+
+.todo-input:focus {
+  box-shadow: none;
+  border-color: #667eea;
+}
+
+.add-btn {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  border: none;
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.add-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.add-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

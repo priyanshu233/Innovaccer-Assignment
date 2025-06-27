@@ -1,0 +1,80 @@
+/* Todo Item Styles */
+.todo-item {
+  border: none;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  background: white;
+  border-left: 4px solid #667eea;
+}
+
+.todo-item:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.todo-item.completed {
+  border-left-color: #28a745;
+  background: linear-gradient(45deg, #f8fff8, #e8f5e8);
+}
+
+.drag-handle {
+  cursor: grab;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.drag-handle:hover {
+  opacity: 1;
+}
+
+.todo-text {
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.todo-checkbox {
+  transform: scale(1.2);
+}
+
+.todo-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.todo-actions .btn {
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.todo-actions .btn:hover {
+  transform: translateY(-2px);
+}
+
+.edit-input {
+  border-radius: 8px;
+  padding: 0.5rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.todo-item {
+  animation: fadeIn 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .todo-actions {
+    flex-direction: column;
+  }
+}
